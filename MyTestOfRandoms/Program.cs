@@ -30,7 +30,7 @@ namespace Chronos
                     System.Console.WriteLine($"{i+1} Roll is {dice[i]}");
                 }
 
-                System.Console.WriteLine($"The sum of all dice is {sum}");
+                System.Console.WriteLine($"The sum of all dice is {sum}!");
             }
     }
 }    
