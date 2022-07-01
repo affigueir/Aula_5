@@ -15,6 +15,7 @@ namespace Chronos
         }
         private static void DiceRoll(int x)
             {
+                int sum = 0;
                 int[] dice = new int[x];
 
                 for(int i = 0; i < x; i++)
@@ -22,11 +23,14 @@ namespace Chronos
                     Random random = new Random();
 
                     dice[i] = random.Next(1, 7);
+                    sum += dice[i];
                 }
-                foreach (int item in dice)
+                for(int i = 0; i < dice.Length; i++)
                 {
-                    System.Console.WriteLine($"The roll is {item}");
+                    System.Console.WriteLine($"{i+1} Roll is {dice[i]}");
                 }
+
+                System.Console.WriteLine($"The sum of all dice is {sum}");
             }
     }
 }    
